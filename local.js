@@ -10,3 +10,14 @@ const addProduct =() =>{
     localStorage.setItem(product,quantity)
     console.log(product, quantity)
 }
+
+const getStoredShoppingCart = () =>{
+    const storedCard = localStorage.getItem('movie');
+    console.log(storedCard)
+    let cart = {};
+    if(storedCard){
+        cart= JSON.parse(storedCard)
+    }
+    console.log(cart)
+}
+getStoredShoppingCart()
